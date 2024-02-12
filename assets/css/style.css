@@ -1,0 +1,252 @@
+@import url("https://fonts.googleapis.com/css2?family=Asap:wght@700&family=Lato:wght@300;400;700&display=swap");
+@keyframes movInLeft {
+  0% {
+    transform: translateX(-6.25rem);
+    opacity: 0; }
+  80% {
+    transform: translateX(1.875rem); }
+  100% {
+    transform: translateX(0);
+    opacity: 1; } }
+
+@keyframes movInRight {
+  0% {
+    transform: translateX(6.25rem);
+    opacity: 0; }
+  80% {
+    transform: translateX(-1.875rem); }
+  100% {
+    transform: translateX(0);
+    opacity: 1; } }
+
+*, *::after, *::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+::selection {
+  background-color: #28b485;
+  color: #fff; }
+
+html {
+  font-size: 1rem; }
+
+body {
+  color: #777;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.7;
+  padding: 1.875rem;
+  font-family: 'Asap', sans-serif;
+  font-family: 'Lato', sans-serif; }
+
+.pri-heading {
+  font-size: 2.188rem;
+  letter-spacing: 0.125rem;
+  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  text-transform: uppercase;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+  transition: all .5s ease-in-out; }
+  .pri-heading:hover, .pri-heading:active, .pri-heading:focus {
+    transform: scale(1.2);
+    text-shadow: 0.313rem 0.625rem 1.25rem rgba(0, 0, 0, 0.2); }
+
+.sec-heading {
+  font-size: 1rem;
+  margin-bottom: 1.25rem;
+  text-transform: uppercase; }
+
+.para {
+  font-size: 1rem;
+  margin-bottom: 1.875rem; }
+
+.text-center {
+  text-align: center; }
+
+.text-uppercase {
+  text-transform: uppercase; }
+
+.btn, .btn:link, .btn:visited {
+  display: inline-block;
+  cursor: pointer;
+  padding: 0.625rem 2.5rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 6.25rem;
+  border: 0;
+  position: relative;
+  transition: all .5s ease-in-out; }
+
+.btn-white {
+  background-color: #fff;
+  color: #777; }
+
+.btn-green {
+  background-color: #28b485;
+  color: #fff; }
+
+.btn::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 6.25rem;
+  z-index: -1;
+  transition: all .4s ease-in-out; }
+
+.btn:hover, .btn:focus {
+  transform: translateY(-0.188rem);
+  box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.2); }
+  .btn:hover::before, .btn:focus::before {
+    transform: scale(1.5);
+    opacity: 0; }
+
+.btn:active {
+  transform: translateY(-0.063rem);
+  box-shadow: 0 0.313rem 0.625rem rgba(0, 0, 0, 0.2); }
+
+.btn-text, .btn-text:link, .btn-text:visited {
+  color: #55c57a;
+  display: inline-block;
+  font-size: 1rem;
+  text-decoration: none;
+  text-transform: capitalize;
+  padding: 5px;
+  border-bottom: 1px solid;
+  transition: all .5s ease-in-out; }
+
+.btn-text span {
+  display: inline-block; }
+
+.btn-text:hover, .btn-text:focus {
+  transform: translateY(-3px);
+  background-color: #55c57a;
+  color: #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); }
+  .btn-text:hover span, .btn-text:focus span {
+    transform: translateX(3px); }
+
+.btn-text:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); }
+
+.composition {
+  position: relative; }
+  .composition-img {
+    width: 55%;
+    position: absolute;
+    border-radius: 3px;
+    box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.4);
+    transition: all .3s ease-in-out;
+    outline-offset: 1rem; }
+    .composition-img:nth-child(1) {
+      left: 0;
+      top: -1.25rem; }
+    .composition-img:nth-child(2) {
+      right: 0;
+      top: 1.25rem; }
+    .composition-img:nth-child(3) {
+      left: 20%;
+      top: 6.25rem; }
+    .composition-img:hover, .composition-img:focus {
+      transform: scale(1.1);
+      box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.5);
+      z-index: 10;
+      outline: 1rem solid #55c57a; }
+  .composition:hover .composition-img:not(:hover) {
+    transform: scale(0.9); }
+
+.feature-card {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 25px;
+  border-radius: 3px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  transition: all .3s ease-in-out; }
+  .feature-card i {
+    background-image: linear-gradient(to right, #7ed56f, #28b485);
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 20px; }
+  .feature-card:hover, .feature-card:focus, .feature-card:active {
+    transform: translateY(-1rem) scale(1.05); }
+
+.container {
+  max-width: 71.25rem;
+  width: 100%;
+  margin: 0 auto; }
+
+.row {
+  display: flex;
+  flex-wrap: wrap; }
+  .row:not(:last-child) {
+    margin-bottom: 5rem; }
+
+[class^="col-"] {
+  padding: 0 15px; }
+
+.col-3 {
+  flex: 0 0 25%; }
+
+.col-6 {
+  flex: 0 0 50%; }
+
+.col-12 {
+  flex: 0 0 100%; }
+
+.header {
+  height: 95vh;
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+  background-image: linear-gradient(135deg, rgba(126, 213, 111, 0.75), rgba(40, 180, 133, 0.75)), url("../images/hero.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+  .header .logo {
+    position: absolute;
+    top: 2.5rem;
+    left: 2.5rem;
+    width: 7.5rem; }
+    .header .logo img {
+      width: 100%; }
+  .header-pri {
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 3.125rem; }
+    .header-pri-main {
+      font-size: 3.75rem;
+      letter-spacing: 2.188rem;
+      font-weight: 400;
+      animation: movInLeft 1s ease-in-out; }
+    .header-pri-sub {
+      font-size: 1.25rem;
+      letter-spacing: 1.063rem;
+      animation: movInRight 1s ease-in-out; }
+
+.section-about {
+  background-color: #f7f7f7;
+  padding: 15.625rem 0;
+  margin-top: -12.5rem; }
+
+.section-feature {
+  padding: 12.5rem 0;
+  background-image: linear-gradient(135deg, rgba(126, 213, 111, 0.75), rgba(40, 180, 133, 0.75)), url("../images/nat-4.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  transform: skewY(-7deg);
+  margin-top: -6.25rem; }
+  .section-feature > * {
+    transform: skewY(7deg); }

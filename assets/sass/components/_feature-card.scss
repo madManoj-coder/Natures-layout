@@ -1,0 +1,18 @@
+.feature-card {
+    background-color: rgba($color-white, .7);
+    padding: 25px;
+    border-radius: 3px;
+    box-shadow: 0 15px 40px rgba($color-dark, .15);
+    text-align: center;
+    transition: all .3s ease-in-out;
+
+    i {
+        @include lg(to right, $color-primary-light, $color-primary-dark);
+        @include backgroundClip;
+        margin-bottom: 20px;
+    }
+
+    &:hover, &:focus, &:active{
+        transform: translateY(-1rem) scale(1.05);
+    }
+}

@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap:wght@700&family=Lato:wght@300;400;700&display=swap');
+
+.pri-heading {
+    font-size: 2.188rem;
+    letter-spacing: 0.125rem;
+    // margin-bottom: 5rem;
+    // background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+    @include lg(to right, $color-primary-light, $color-primary-dark);
+    text-transform: uppercase;
+    @include backgroundClip;
+    display: inline-block;
+    transition: all .5s ease-in-out;
+
+    &:hover,
+    &:active,
+    &:focus {
+        transform: scale(1.2);
+        text-shadow: 0.313rem 0.625rem 1.25rem rgba($color-dark, .2);
+    }
+}
+
+.sec-heading {
+    font-size: 1rem;
+    margin-bottom: 1.25rem;
+    text-transform: uppercase;
+}
+
+.para {
+    font-size: 1rem;
+    margin-bottom: 1.875rem;
+}

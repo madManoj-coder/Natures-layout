@@ -1,0 +1,29 @@
+
+
+@keyframes movInLeft{
+    0%{
+        transform: translateX(-6.25rem);
+        opacity: 0;
+    }
+    80%{
+        transform: translateX(1.875rem);
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes movInRight{
+    0%{
+        transform: translateX(6.25rem);
+        opacity: 0;
+    }
+    80%{
+        transform: translateX(-1.875rem);
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
